@@ -1,0 +1,25 @@
+#include<stdio.h>
+int fact(int n);
+int main()
+{
+	printf("Factorial in C");
+	int x,r;
+	printf("\nSum OF The Given Number");
+	scanf("%d",&x);
+	r=fact(x);
+	printf("%d",r);
+//	return 0;
+}
+int fact(int x)
+{
+	if(x!=0)
+	{
+		return (x*fact(x-1));
+	}
+	
+	else
+	{
+		return 1;
+	
+}
+}
