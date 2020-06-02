@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+	printf("\n\t*****  Files In C Programming  *****\n");
+	FILE *fp;
+	fp=fopen("Upper Elements.txt","w");
+	int i,j,sum=0;
+	int a[3][3];
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+		{
+	  	 scanf("%d",&a[i][j]);
+		}
+		printf("\n");
+	}
+	sum=a[0][1]+a[0][2]+a[1][2];
+	   	
+printf("%d\n\n",sum);
+printf("Check the file created in the system named :- Upper Elements.txt");
+for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+		{
+	  	 fprintf(fp,"%d ",a[i][j]);
+	  	}
+		fprintf(fp,"\n");
+	}
+fprintf(fp,"\n\t     Sum of upper triangular elements is %d \n",sum);
+fclose(fp);	
+return 0;
+}
