@@ -1,0 +1,24 @@
+#include<stdio.h>
+int sum(int *a,int *b,int *c);
+int main()
+{
+	printf("\n\tPass by Reference");
+	int a,b,c;
+	printf("\n\nEnter Value A = ");
+	scanf("%d",&a);
+	printf("\nEnter Value B = ");
+	scanf("%d",&b);
+	printf("\nEnter Value C = ");
+	scanf("%d",&c);
+	int res=sum(&a,&b,&c);
+	printf("\n\t    A = %d\n\n\t    B = %d\n\n\t    C = %d",a,b,c);
+}
+int sum(int *a,int *b,int *c)
+{
+	int temp;
+	 temp = *b;
+    *b = *a;
+    *a = *c;
+    *c = temp;
+	
+}
