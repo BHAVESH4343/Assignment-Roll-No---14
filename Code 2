@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<string.h>
+#include<math.h>
+void pow();
+int main()
+{
+	printf("\n\t\tWithout Argument Without Return Type\n");
+	pow();
+	return 0;	
+}
+void pow()
+{
+	int n;
+	printf("\n\t\t     Enter the value for n : ");
+	scanf("%d",&n);
+	int i,sum=0;
+		for(i=0;i<=n;i++)
+	{
+		sum=sum+pow(i,3);	
+	}
+	printf("\n\tSum of the cubes of 1st %d Natural numbers is %d\n\n",n,sum);
+}
